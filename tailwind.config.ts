@@ -16,9 +16,9 @@ const config: Config = {
         'steel-gray': '#8A8F98',
       },
       fontFamily: {
-        'orbitron': ['Orbitron', 'sans-serif'],
-        'inter': ['Inter', 'sans-serif'],
-        'montserrat': ['Montserrat', 'sans-serif'],
+        'orbitron': ['Playfair Display', 'serif'],
+        'inter': ['Manrope', 'sans-serif'],
+        'montserrat': ['Manrope', 'sans-serif'],
       },
       animation: {
         'fade-in-up': 'fadeInUp 0.6s ease-out',

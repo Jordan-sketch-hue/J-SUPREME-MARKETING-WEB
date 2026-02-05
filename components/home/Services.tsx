@@ -50,7 +50,7 @@ const Services = () => {
             What We <span className="text-supreme-gold">Do</span>
           </h2>
           <p className="text-xl text-steel-gray max-w-3xl mx-auto">
-            Three pillars of performance marketing that drive measurable results
+            Premium marketing systems and lifestyle-driven brand experiences that convert.
           </p>
         </motion.div>
 
@@ -68,7 +68,7 @@ const Services = () => {
                 boxShadow: "0 20px 60px rgba(201, 162, 77, 0.2)",
                 transition: { duration: 0.3 }
               }}
-              className="glass-effect p-8 rounded-2xl group hover:border-supreme-gold transition-all duration-300 cursor-pointer"
+              className="glass-effect p-8 rounded-2xl group hover:border-supreme-gold transition-all duration-300 cursor-pointer h-full flex flex-col"
             >
               <motion.div 
                 whileHover={{ rotate: [0, -10, 10, -10, 0], scale: 1.1 }}
@@ -78,15 +78,15 @@ const Services = () => {
                 <service.icon className={`text-3xl text-${service.color} group-hover:scale-110 transition-transform duration-300`} />
               </motion.div>
               
-              <h3 className="text-2xl font-orbitron font-semibold mb-4 text-platinum-white group-hover:text-supreme-gold transition-colors duration-300">
+              <h3 className="text-xl md:text-2xl font-orbitron font-semibold mb-3 text-platinum-white group-hover:text-supreme-gold transition-colors duration-300">
                 {service.title}
               </h3>
               
-              <p className="text-steel-gray mb-6">
+              <p className="text-sm md:text-base text-steel-gray mb-5">
                 {service.description}
               </p>
               
-              <ul className="space-y-2 mb-6">
+              <ul className="space-y-2 mb-6 flex-1">
                 {service.features.map((feature, i) => (
                   <li key={i} className="flex items-center text-sm text-steel-gray">
                     <span className="w-1.5 h-1.5 bg-supreme-gold rounded-full mr-2"></span>
@@ -97,130 +97,129 @@ const Services = () => {
               
               <Link
                 href="/services"
-                className="text-supreme-gold font-semibold text-sm hover:underline"
+                className="text-supreme-gold font-semibold text-sm hover:underline mt-auto"
               >
                 Learn More →
               </Link>
-
-                  {/* Additional Services Row */}
-                  <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6, delay: 0.4 }}
-                    className="grid grid-cols-1 md:grid-cols-3 gap-8"
-                  >
-                    <motion.div
-                      whileHover={{ y: -10, scale: 1.02 }}
-                      className="glass-effect p-8 rounded-2xl group hover:border-supreme-gold transition-all duration-300"
-                    >
-                      <div className="w-16 h-16 bg-supreme-gold bg-opacity-20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                        <FiZap className="text-3xl text-supreme-gold" />
-                      </div>
-                      <h3 className="text-2xl font-orbitron font-semibold mb-4 text-platinum-white group-hover:text-supreme-gold transition-colors duration-300">
-                        Influencer Marketing
-                      </h3>
-                      <p className="text-steel-gray mb-6">
-                        Connect with influencers who drive real results.
-                      </p>
-                      <ul className="space-y-2 mb-6">
-                        <li className="flex items-center text-sm text-steel-gray">
-                          <span className="w-1.5 h-1.5 bg-supreme-gold rounded-full mr-2"></span>
-                          Influencer Partnerships
-                        </li>
-                        <li className="flex items-center text-sm text-steel-gray">
-                          <span className="w-1.5 h-1.5 bg-supreme-gold rounded-full mr-2"></span>
-                          Campaign Management
-                        </li>
-                        <li className="flex items-center text-sm text-steel-gray">
-                          <span className="w-1.5 h-1.5 bg-supreme-gold rounded-full mr-2"></span>
-                          ROI Tracking
-                        </li>
-                        <li className="flex items-center text-sm text-steel-gray">
-                          <span className="w-1.5 h-1.5 bg-supreme-gold rounded-full mr-2"></span>
-                          Creator Vetting
-                        </li>
-                      </ul>
-                      <Link href="/services" className="text-supreme-gold font-semibold text-sm hover:underline">
-                        Learn More →
-                      </Link>
-                    </motion.div>
-
-                    <motion.div
-                      whileHover={{ y: -10, scale: 1.02 }}
-                      className="glass-effect p-8 rounded-2xl group hover:border-supreme-gold transition-all duration-300"
-                    >
-                      <div className="w-16 h-16 bg-electric-blue bg-opacity-20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                        <FiTrendingUp className="text-3xl text-electric-blue" />
-                      </div>
-                      <h3 className="text-2xl font-orbitron font-semibold mb-4 text-platinum-white group-hover:text-supreme-gold transition-colors duration-300">
-                        Business Setup
-                      </h3>
-                      <p className="text-steel-gray mb-6">
-                        Launch your business with expert guidance.
-                      </p>
-                      <ul className="space-y-2 mb-6">
-                        <li className="flex items-center text-sm text-steel-gray">
-                          <span className="w-1.5 h-1.5 bg-supreme-gold rounded-full mr-2"></span>
-                          Business Formation
-                        </li>
-                        <li className="flex items-center text-sm text-steel-gray">
-                          <span className="w-1.5 h-1.5 bg-supreme-gold rounded-full mr-2"></span>
-                          Systems & Operations
-                        </li>
-                        <li className="flex items-center text-sm text-steel-gray">
-                          <span className="w-1.5 h-1.5 bg-supreme-gold rounded-full mr-2"></span>
-                          Tech Stack Setup
-                        </li>
-                        <li className="flex items-center text-sm text-steel-gray">
-                          <span className="w-1.5 h-1.5 bg-supreme-gold rounded-full mr-2"></span>
-                          Go-to-Market Strategy
-                        </li>
-                      </ul>
-                      <Link href="/services" className="text-supreme-gold font-semibold text-sm hover:underline">
-                        Learn More →
-                      </Link>
-                    </motion.div>
-
-                    <motion.div
-                      whileHover={{ y: -10, scale: 1.02 }}
-                      className="glass-effect p-8 rounded-2xl group hover:border-supreme-gold transition-all duration-300"
-                    >
-                      <div className="w-16 h-16 bg-supreme-gold bg-opacity-20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                        <FiSearch className="text-3xl text-supreme-gold" />
-                      </div>
-                      <h3 className="text-2xl font-orbitron font-semibold mb-4 text-platinum-white group-hover:text-supreme-gold transition-colors duration-300">
-                        SEO & Growth
-                      </h3>
-                      <p className="text-steel-gray mb-6">
-                        Long-term organic growth that compounds.
-                      </p>
-                      <ul className="space-y-2 mb-6">
-                        <li className="flex items-center text-sm text-steel-gray">
-                          <span className="w-1.5 h-1.5 bg-supreme-gold rounded-full mr-2"></span>
-                          Technical SEO
-                        </li>
-                        <li className="flex items-center text-sm text-steel-gray">
-                          <span className="w-1.5 h-1.5 bg-supreme-gold rounded-full mr-2"></span>
-                          Content Strategy
-                        </li>
-                        <li className="flex items-center text-sm text-steel-gray">
-                          <span className="w-1.5 h-1.5 bg-supreme-gold rounded-full mr-2"></span>
-                          Link Building
-                        </li>
-                        <li className="flex items-center text-sm text-steel-gray">
-                          <span className="w-1.5 h-1.5 bg-supreme-gold rounded-full mr-2"></span>
-                          Local SEO
-                        </li>
-                      </ul>
-                      <Link href="/services" className="text-supreme-gold font-semibold text-sm hover:underline">
-                        Learn More →
-                      </Link>
-                    </motion.div>
-                  </motion.div>
             </motion.div>
           ))}
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="grid grid-cols-1 md:grid-cols-3 gap-8"
+        >
+          <motion.div
+            whileHover={{ y: -10, scale: 1.02 }}
+            className="glass-effect p-8 rounded-2xl group hover:border-supreme-gold transition-all duration-300 h-full flex flex-col"
+          >
+            <div className="w-16 h-16 bg-supreme-gold bg-opacity-20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+              <FiZap className="text-3xl text-supreme-gold" />
+            </div>
+            <h3 className="text-xl md:text-2xl font-orbitron font-semibold mb-3 text-platinum-white group-hover:text-supreme-gold transition-colors duration-300">
+              Influencer Marketing
+            </h3>
+            <p className="text-sm md:text-base text-steel-gray mb-5">
+              Connect with creators who elevate brand trust and demand.
+            </p>
+            <ul className="space-y-2 mb-6 flex-1">
+              <li className="flex items-center text-sm text-steel-gray">
+                <span className="w-1.5 h-1.5 bg-supreme-gold rounded-full mr-2"></span>
+                Influencer Partnerships
+              </li>
+              <li className="flex items-center text-sm text-steel-gray">
+                <span className="w-1.5 h-1.5 bg-supreme-gold rounded-full mr-2"></span>
+                Campaign Management
+              </li>
+              <li className="flex items-center text-sm text-steel-gray">
+                <span className="w-1.5 h-1.5 bg-supreme-gold rounded-full mr-2"></span>
+                ROI Tracking
+              </li>
+              <li className="flex items-center text-sm text-steel-gray">
+                <span className="w-1.5 h-1.5 bg-supreme-gold rounded-full mr-2"></span>
+                Creator Vetting
+              </li>
+            </ul>
+            <Link href="/services" className="text-supreme-gold font-semibold text-sm hover:underline mt-auto">
+              Learn More →
+            </Link>
+          </motion.div>
+
+          <motion.div
+            whileHover={{ y: -10, scale: 1.02 }}
+            className="glass-effect p-8 rounded-2xl group hover:border-supreme-gold transition-all duration-300 h-full flex flex-col"
+          >
+            <div className="w-16 h-16 bg-electric-blue bg-opacity-20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+              <FiTrendingUp className="text-3xl text-electric-blue" />
+            </div>
+            <h3 className="text-xl md:text-2xl font-orbitron font-semibold mb-3 text-platinum-white group-hover:text-supreme-gold transition-colors duration-300">
+              Business Setup
+            </h3>
+            <p className="text-sm md:text-base text-steel-gray mb-5">
+              Launch your business with premium systems and guidance.
+            </p>
+            <ul className="space-y-2 mb-6 flex-1">
+              <li className="flex items-center text-sm text-steel-gray">
+                <span className="w-1.5 h-1.5 bg-supreme-gold rounded-full mr-2"></span>
+                Business Formation
+              </li>
+              <li className="flex items-center text-sm text-steel-gray">
+                <span className="w-1.5 h-1.5 bg-supreme-gold rounded-full mr-2"></span>
+                Systems & Operations
+              </li>
+              <li className="flex items-center text-sm text-steel-gray">
+                <span className="w-1.5 h-1.5 bg-supreme-gold rounded-full mr-2"></span>
+                Tech Stack Setup
+              </li>
+              <li className="flex items-center text-sm text-steel-gray">
+                <span className="w-1.5 h-1.5 bg-supreme-gold rounded-full mr-2"></span>
+                Go-to-Market Strategy
+              </li>
+            </ul>
+            <Link href="/services" className="text-supreme-gold font-semibold text-sm hover:underline mt-auto">
+              Learn More →
+            </Link>
+          </motion.div>
+
+          <motion.div
+            whileHover={{ y: -10, scale: 1.02 }}
+            className="glass-effect p-8 rounded-2xl group hover:border-supreme-gold transition-all duration-300 h-full flex flex-col"
+          >
+            <div className="w-16 h-16 bg-supreme-gold bg-opacity-20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+              <FiSearch className="text-3xl text-supreme-gold" />
+            </div>
+            <h3 className="text-xl md:text-2xl font-orbitron font-semibold mb-3 text-platinum-white group-hover:text-supreme-gold transition-colors duration-300">
+              SEO & Growth
+            </h3>
+            <p className="text-sm md:text-base text-steel-gray mb-5">
+              Long-term organic growth that compounds with authority.
+            </p>
+            <ul className="space-y-2 mb-6 flex-1">
+              <li className="flex items-center text-sm text-steel-gray">
+                <span className="w-1.5 h-1.5 bg-supreme-gold rounded-full mr-2"></span>
+                Technical SEO
+              </li>
+              <li className="flex items-center text-sm text-steel-gray">
+                <span className="w-1.5 h-1.5 bg-supreme-gold rounded-full mr-2"></span>
+                Content Strategy
+              </li>
+              <li className="flex items-center text-sm text-steel-gray">
+                <span className="w-1.5 h-1.5 bg-supreme-gold rounded-full mr-2"></span>
+                Link Building
+              </li>
+              <li className="flex items-center text-sm text-steel-gray">
+                <span className="w-1.5 h-1.5 bg-supreme-gold rounded-full mr-2"></span>
+                Local SEO
+              </li>
+            </ul>
+            <Link href="/services" className="text-supreme-gold font-semibold text-sm hover:underline mt-auto">
+              Learn More →
+            </Link>
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   );

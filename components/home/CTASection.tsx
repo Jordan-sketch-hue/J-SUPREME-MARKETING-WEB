@@ -40,11 +40,11 @@ const CTASection = () => {
         >
           {/* Heading */}
           <h2 className="text-4xl md:text-6xl font-orbitron font-bold mb-6">
-            Ready to <span className="text-gradient">Scale Smarter</span>?
+            Ready for a <span className="text-gradient">Premium Growth Plan</span>?
           </h2>
           
           <p className="text-xl text-steel-gray mb-8 max-w-2xl mx-auto">
-            Get a free growth audit and discover the leaks, gaps, and opportunities in your current marketing.
+            Get a premium audit that reveals where your brand experience, content, and ads can convert more.
           </p>
 
           {/* Benefits List */}

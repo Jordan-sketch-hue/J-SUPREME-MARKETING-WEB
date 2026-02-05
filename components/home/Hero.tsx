@@ -50,7 +50,7 @@ const Hero = () => {
               transition={{ duration: 3, repeat: Infinity }}
               className="text-sm text-steel-gray"
             >
-              Performance-Driven Marketing
+              Premium Marketing & Lifestyle Growth
             </motion.span>
           </motion.div>
 
@@ -61,11 +61,11 @@ const Hero = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-5xl md:text-7xl lg:text-8xl font-orbitron font-bold mb-6 leading-tight"
           >
-            Supreme Marketing
+            Premium Marketing
             <br />
-            <span className="text-gradient">Systems That Drive</span>
+            <span className="text-gradient">Lifestyle Brands</span>
             <br />
-            Real Growth
+            That Sell
           </motion.h1>
 
           {/* Subheadline */}
@@ -75,9 +75,9 @@ const Hero = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="text-xl md:text-2xl text-steel-gray mb-12 max-w-3xl mx-auto leading-relaxed"
           >
-            We help brands scale with <span className="text-supreme-gold font-semibold">paid ads</span>, 
-            <span className="text-supreme-gold font-semibold"> funnels</span>, and 
-            <span className="text-supreme-gold font-semibold"> conversion-focused strategies</span> — not guesswork.
+            We build premium experiences with <span className="text-supreme-gold font-semibold">paid ads</span>,
+            <span className="text-supreme-gold font-semibold"> funnels</span>, and
+            <span className="text-supreme-gold font-semibold"> conversion-first strategy</span> that turn attention into sales.
           </motion.p>
 
           {/* CTA Buttons */}
