@@ -27,11 +27,50 @@ const ContactForm = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    await new Promise(resolve => setTimeout(resolve, 1500));
-    
-    console.log('Contact form submitted:', formData);
-    setIsSubmitted(true);
-    setIsSubmitting(false);
+    try {
+      // Send via Email (Web3Forms)
+      const emailResponse = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          access_key: '81a41f7e-8e6e-4c36-9d56-d9a5e9f6dcf5', // Get free key at web3forms.com
+          subject: `💬 New Contact Message: ${formData.subject}`,
+          from_name: formData.name,
+          email: formData.email,
+          message: `
+Name: ${formData.name}
+Email: ${formData.email}
+Company: ${formData.company || 'Not provided'}
+Subject: ${formData.subject}
+
+Message:
+${formData.message}
+          `,
+        }),
+      });
+
+      // Send via WhatsApp
+      const whatsappMessage = encodeURIComponent(
+        `💬 *NEW CONTACT MESSAGE*\n\n` +
+        `*Name:* ${formData.name}\n` +
+        `*Email:* ${formData.email}\n` +
+        `*Company:* ${formData.company || 'Not provided'}\n` +
+        `*Subject:* ${formData.subject}\n\n` +
+        `*Message:*\n${formData.message}`
+      );
+      
+      // Open WhatsApp in new tab
+      window.open(`https://wa.me/6582182282?text=${whatsappMessage}`, '_blank');
+
+      setIsSubmitted(true);
+    } catch (error) {
+      console.error('Form submission error:', error);
+      alert('There was an error sending your message. Please try again or contact us directly.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   if (isSubmitted) {

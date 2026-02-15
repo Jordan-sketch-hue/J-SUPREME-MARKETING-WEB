@@ -52,12 +52,51 @@ const AuditForm = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1500));
-    
-    console.log('Form submitted:', formData);
-    setIsSubmitted(true);
-    setIsSubmitting(false);
+    try {
+      // Send via Email (Web3Forms)
+      const emailResponse = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          access_key: '81a41f7e-8e6e-4c36-9d56-d9a5e9f6dcf5', // Get free key at web3forms.com
+          subject: `🔥 New Free Audit Request from ${formData.businessName}`,
+          from_name: formData.businessName,
+          email: formData.email,
+          message: `
+Business: ${formData.businessName}
+Website: ${formData.websiteUrl}
+Ad Spend: ${formData.adSpend}
+Services: ${formData.services.join(', ')}
+Challenge: ${formData.challenge}
+Phone/WhatsApp: ${formData.phone || 'Not provided'}
+          `,
+        }),
+      });
+
+      // Send via WhatsApp
+      const whatsappMessage = encodeURIComponent(
+        `🔥 *NEW FREE AUDIT REQUEST*\n\n` +
+        `*Business:* ${formData.businessName}\n` +
+        `*Website:* ${formData.websiteUrl}\n` +
+        `*Ad Spend:* ${formData.adSpend}\n` +
+        `*Services:* ${formData.services.join(', ')}\n` +
+        `*Challenge:* ${formData.challenge}\n` +
+        `*Email:* ${formData.email}\n` +
+        `*Phone:* ${formData.phone || 'Not provided'}`
+      );
+      
+      // Open WhatsApp in new tab
+      window.open(`https://wa.me/6582182282?text=${whatsappMessage}`, '_blank');
+
+      setIsSubmitted(true);
+    } catch (error) {
+      console.error('Form submission error:', error);
+      alert('There was an error submitting your request. Please try again or contact us directly.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   if (isSubmitted) {
