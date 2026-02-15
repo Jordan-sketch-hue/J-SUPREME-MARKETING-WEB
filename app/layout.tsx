@@ -19,9 +19,6 @@ export const metadata: Metadata = {
     description: "Supreme marketing systems that drive real growth.",
     type: "website",
   },
-  verification: {
-    google: 'YOUR_GOOGLE_ADSENSE_VERIFICATION_CODE',
-  },
 };
 
 export default function RootLayout({
@@ -35,7 +32,7 @@ export default function RootLayout({
         {/* Google AdSense */}
         <Script
           async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=YOUR_ADSENSE_CLIENT_ID"
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4986542893390493"
           crossOrigin="anonymous"
           strategy="afterInteractive"
         />
