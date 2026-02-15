@@ -64,6 +64,15 @@ ${formData.message}
       // Open WhatsApp in new tab
       window.open(`https://wa.me/6582182282?text=${whatsappMessage}`, '_blank');
 
+      // Track conversion in Google Ads (General inquiry - Page view conversion)
+      if (typeof window !== 'undefined' && (window as any).gtag) {
+        (window as any).gtag('event', 'conversion', {
+          'send_to': 'AW-11161550773/CX_XCNHA584YELX_nsop',
+          'value': 100.0, // Estimated inquiry value
+          'currency': 'USD'
+        });
+      }
+
       setIsSubmitted(true);
     } catch (error) {
       console.error('Form submission error:', error);

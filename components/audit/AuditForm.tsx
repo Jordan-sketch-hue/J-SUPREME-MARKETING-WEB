@@ -90,6 +90,16 @@ Phone/WhatsApp: ${formData.phone || 'Not provided'}
       // Open WhatsApp in new tab
       window.open(`https://wa.me/6582182282?text=${whatsappMessage}`, '_blank');
 
+      // Track conversion in Google Ads (High-value lead - Purchase conversion)
+      if (typeof window !== 'undefined' && (window as any).gtag) {
+        (window as any).gtag('event', 'conversion', {
+          'send_to': 'AW-11161550773/uCMaCM7A584YELX_nsop',
+          'value': 500.0, // Estimated lead value
+          'currency': 'USD',
+          'transaction_id': Date.now().toString()
+        });
+      }
+
       setIsSubmitted(true);
     } catch (error) {
       console.error('Form submission error:', error);
