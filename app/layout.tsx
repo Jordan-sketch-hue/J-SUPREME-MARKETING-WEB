@@ -32,7 +32,7 @@ export default function RootLayout({
         {/* Google AdSense */}
         <Script
           async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4986542893390493"
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4986542893990493"
           crossOrigin="anonymous"
           strategy="afterInteractive"
         />
