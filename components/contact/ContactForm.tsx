@@ -35,7 +35,7 @@ const ContactForm = () => {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          access_key: '81a41f7e-8e6e-4c36-9d56-d9a5e9f6dcf5', // Get free key at web3forms.com
+          access_key: '68c4a6c9-bbec-46c4-933b-70eb272e8c7a',
           subject: `💬 New Contact Message: ${formData.subject}`,
           from_name: formData.name,
           email: formData.email,
