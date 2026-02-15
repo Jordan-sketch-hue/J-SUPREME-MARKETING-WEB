@@ -50,6 +50,22 @@ const Footer = () => {
               Supreme marketing systems that turn attention into predictable revenue. 
               Building high-performance strategies for ambitious brands.
             </p>
+            
+            {/* Contact Information */}
+            <div className="mb-6 space-y-2">
+              <p className="text-steel-gray">
+                <a href="mailto:global.jsuprememarketing@gmail.com" className="hover:text-supreme-gold transition-colors">
+                  global.jsuprememarketing@gmail.com
+                </a>
+              </p>
+              <p className="text-steel-gray">
+                <a href="tel:6582182282" className="hover:text-supreme-gold transition-colors">
+                  658-218-2282
+                </a>
+              </p>
+              <p className="text-steel-gray">Kingston, Jamaica</p>
+            </div>
+            
             <div className="flex space-x-4">
               {socialLinks.map((social) => (
                 <a
